@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3199A14720DACC74005CB940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A14620DACC74005CB940 /* AppDelegate.swift */; };
-		3199A14920DACC74005CB940 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A14820DACC74005CB940 /* ViewController.swift */; };
+		3199A14920DACC74005CB940 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A14820DACC74005CB940 /* HomeViewController.swift */; };
 		3199A14C20DACC74005CB940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3199A14A20DACC74005CB940 /* Main.storyboard */; };
 		3199A14E20DACC76005CB940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3199A14D20DACC76005CB940 /* Assets.xcassets */; };
 		3199A15120DACC76005CB940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3199A14F20DACC76005CB940 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,13 @@
 		3199A17720DADAD7005CB940 /* SubtitleModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A17620DADAD7005CB940 /* SubtitleModalViewController.swift */; };
 		3199A17920DADB50005CB940 /* ModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A17820DADB50005CB940 /* ModalViewModel.swift */; };
 		3199A17B20DADBBC005CB940 /* SubtitleTextFieldModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A17A20DADBBC005CB940 /* SubtitleTextFieldModalViewController.swift */; };
+		31A67DF920DC31FD006D11BF /* GradientSubtitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67DF720DC31FD006D11BF /* GradientSubtitleTableViewCell.xib */; };
+		31A67DFB20DC3D3B006D11BF /* GradientSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A67DFA20DC3D3B006D11BF /* GradientSubtitleTableViewCell.swift */; };
+		31A67DFF20DC4284006D11BF /* SubtitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67DFD20DC4284006D11BF /* SubtitleTableViewCell.xib */; };
+		31A67E0320DC459C006D11BF /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67E0120DC459C006D11BF /* CardTableViewCell.xib */; };
+		31A67E0920DC4957006D11BF /* TopCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */; };
+		31A67E0D20DC496F006D11BF /* MiddleCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */; };
+		31A67E1120DC497F006D11BF /* BottomCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */; };
 		5F8468D43E352A5F17FC3718 /* Pods_kevinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B57660A3F17F2676623D7C4 /* Pods_kevinTests.framework */; };
 		845B5B7663469C89CB40D31F /* Pods_kevin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ECEED9E2E9FA7319B53ADB /* Pods_kevin.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +46,7 @@
 		2FF5CEBD108FA024DE494BA0 /* Pods-kevin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kevin.release.xcconfig"; path = "Pods/Target Support Files/Pods-kevin/Pods-kevin.release.xcconfig"; sourceTree = "<group>"; };
 		3199A14320DACC74005CB940 /* kevin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kevin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3199A14620DACC74005CB940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3199A14820DACC74005CB940 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3199A14820DACC74005CB940 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3199A14B20DACC74005CB940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3199A14D20DACC76005CB940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3199A15020DACC76005CB940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +62,13 @@
 		3199A17620DADAD7005CB940 /* SubtitleModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleModalViewController.swift; sourceTree = "<group>"; };
 		3199A17820DADB50005CB940 /* ModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewModel.swift; sourceTree = "<group>"; };
 		3199A17A20DADBBC005CB940 /* SubtitleTextFieldModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTextFieldModalViewController.swift; sourceTree = "<group>"; };
+		31A67DF720DC31FD006D11BF /* GradientSubtitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradientSubtitleTableViewCell.xib; sourceTree = "<group>"; };
+		31A67DFA20DC3D3B006D11BF /* GradientSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSubtitleTableViewCell.swift; sourceTree = "<group>"; };
+		31A67DFD20DC4284006D11BF /* SubtitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleTableViewCell.xib; sourceTree = "<group>"; };
+		31A67E0120DC459C006D11BF /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
+		31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCardTableViewCell.xib; sourceTree = "<group>"; };
+		31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleCardTableViewCell.xib; sourceTree = "<group>"; };
+		31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardTableViewCell.xib; sourceTree = "<group>"; };
 		44ECEED9E2E9FA7319B53ADB /* Pods_kevin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kevin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		706973FE02C05D67132F8D28 /* Pods-kevin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kevin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kevin/Pods-kevin.debug.xcconfig"; sourceTree = "<group>"; };
 		70C2E8AECA43DBB30CC543FF /* Pods-kevinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kevinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kevinTests/Pods-kevinTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +122,7 @@
 				3199A16620DACE8B005CB940 /* Application */,
 				3199A16720DACEAD005CB940 /* UI */,
 				3199A16820DACEE7005CB940 /* Utility */,
-				3199A14820DACC74005CB940 /* ViewController.swift */,
+				3199A14820DACC74005CB940 /* HomeViewController.swift */,
 			);
 			path = kevin;
 			sourceTree = "<group>";
@@ -137,6 +151,7 @@
 				3199A14A20DACC74005CB940 /* Main.storyboard */,
 				3199A14D20DACC76005CB940 /* Assets.xcassets */,
 				3199A14F20DACC76005CB940 /* LaunchScreen.storyboard */,
+				31A67DEF20DC30D1006D11BF /* TableViewCells */,
 				3199A16B20DAD725005CB940 /* SharedViews */,
 				3199A17520DADAB8005CB940 /* ModalViews */,
 			);
@@ -170,6 +185,28 @@
 				3199A17820DADB50005CB940 /* ModalViewModel.swift */,
 			);
 			path = ModalViews;
+			sourceTree = "<group>";
+		};
+		31A67DEF20DC30D1006D11BF /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				31A67DF720DC31FD006D11BF /* GradientSubtitleTableViewCell.xib */,
+				31A67DFA20DC3D3B006D11BF /* GradientSubtitleTableViewCell.swift */,
+				31A67DFD20DC4284006D11BF /* SubtitleTableViewCell.xib */,
+				31A67E1220DC4988006D11BF /* CardTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		31A67E1220DC4988006D11BF /* CardTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				31A67E0120DC459C006D11BF /* CardTableViewCell.xib */,
+				31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */,
+				31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */,
+				31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */,
+			);
+			path = CardTableViewCell;
 			sourceTree = "<group>";
 		};
 		83497B14B1AB1C527F275FC4 /* Frameworks */ = {
@@ -276,9 +313,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A67E0D20DC496F006D11BF /* MiddleCardTableViewCell.xib in Resources */,
+				31A67E1120DC497F006D11BF /* BottomCardTableViewCell.xib in Resources */,
+				31A67E0920DC4957006D11BF /* TopCardTableViewCell.xib in Resources */,
 				3199A15120DACC76005CB940 /* LaunchScreen.storyboard in Resources */,
+				31A67DF920DC31FD006D11BF /* GradientSubtitleTableViewCell.xib in Resources */,
 				3199A14E20DACC76005CB940 /* Assets.xcassets in Resources */,
 				3199A14C20DACC74005CB940 /* Main.storyboard in Resources */,
+				31A67DFF20DC4284006D11BF /* SubtitleTableViewCell.xib in Resources */,
+				31A67E0320DC459C006D11BF /* CardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,8 +409,9 @@
 				3199A17B20DADBBC005CB940 /* SubtitleTextFieldModalViewController.swift in Sources */,
 				3199A16F20DAD7CE005CB940 /* GradientView.swift in Sources */,
 				3199A17420DAD876005CB940 /* SharedTableViewCell.swift in Sources */,
+				31A67DFB20DC3D3B006D11BF /* GradientSubtitleTableViewCell.swift in Sources */,
 				3199A17720DADAD7005CB940 /* SubtitleModalViewController.swift in Sources */,
-				3199A14920DACC74005CB940 /* ViewController.swift in Sources */,
+				3199A14920DACC74005CB940 /* HomeViewController.swift in Sources */,
 				3199A14720DACC74005CB940 /* AppDelegate.swift in Sources */,
 				3199A17120DAD7E7005CB940 /* ActionButtons.swift in Sources */,
 				3199A17920DADB50005CB940 /* ModalViewModel.swift in Sources */,

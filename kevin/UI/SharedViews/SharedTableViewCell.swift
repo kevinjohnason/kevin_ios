@@ -37,16 +37,21 @@ class PassThroughTableView: UITableView {
 
 class SubtitleTableViewCell: UITableViewCell {
     var disposeBag: DisposeBag = DisposeBag()
-    @IBOutlet weak var cellImageView: UIImageView?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-
     
     override func prepareForReuse() {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
 }
+
+
+class ImageSubtitleTableViewCell: SubtitleTableViewCell {
+    @IBOutlet weak var cellImageView: UIImageView?
+
+}
+
 
 class SubtitleActionTableViewCell: SubtitleTableViewCell, ActionButtonCell {
     
