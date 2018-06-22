@@ -1,0 +1,7 @@
+disabled_rules:
+  - trailing_whitespace
+excluded:
+  - Pods
+  - kevin/Utility/RxExtensions
+  - kevinTests
+line_length: 150
