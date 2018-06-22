@@ -46,12 +46,10 @@ class SubtitleTableViewCell: UITableViewCell {
     }
 }
 
-
 class ImageSubtitleTableViewCell: SubtitleTableViewCell {
     @IBOutlet weak var cellImageView: UIImageView?
 
 }
-
 
 class SubtitleActionTableViewCell: SubtitleTableViewCell, ActionButtonCell {
     
@@ -120,4 +118,3 @@ class SearchBarTableViewCell: UITableViewCell {
         }).disposed(by: disposeBag)
     }
 }
-

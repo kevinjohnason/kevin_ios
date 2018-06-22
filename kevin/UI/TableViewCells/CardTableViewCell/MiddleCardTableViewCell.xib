@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQv-cn-VNt" customClass="RoundView" customModule="kevin" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQv-cn-VNt">
                         <rect key="frame" x="10" y="0.0" width="300" height="43.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n6Y-wk-LcD">
@@ -47,11 +47,6 @@
                             <constraint firstItem="n6Y-wk-LcD" firstAttribute="leading" secondItem="xQv-cn-VNt" secondAttribute="leading" constant="10" id="jSk-hN-th4"/>
                             <constraint firstAttribute="trailing" secondItem="n6Y-wk-LcD" secondAttribute="trailing" constant="10" id="ooE-Nr-AnE"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="8"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" red="0.96798036509999996" green="0.96229133020000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

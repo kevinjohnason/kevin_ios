@@ -51,6 +51,10 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="8"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundTopLeftCorner" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundTopRightCorner" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundBottomLeftCorner" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundBottomRightCorner" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>

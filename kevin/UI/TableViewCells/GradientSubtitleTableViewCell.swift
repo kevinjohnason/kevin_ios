@@ -27,8 +27,4 @@ class GradientSubtitleTableViewCell: SubtitleTableViewCell {
         super.layoutSubviews()
         gradient.frame = self.bounds
     }
-        
-    
-    
-    
 }

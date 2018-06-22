@@ -241,6 +241,7 @@
 				3199A14020DACC74005CB940 /* Frameworks */,
 				3199A14120DACC74005CB940 /* Resources */,
 				04264A2A6743DA5A454871CE /* [CP] Embed Pods Frameworks */,
+				3100394120DD84EE00BB027F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -360,6 +361,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kevin/Pods-kevin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3100394120DD84EE00BB027F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		B00CBCC40F727B614A332D3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

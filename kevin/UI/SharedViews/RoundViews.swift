@@ -96,14 +96,16 @@ class RoundLabel: UILabel {
 @IBDesignable
 class RoundView: UIView {
     @IBInspectable var cornerRadius: CGFloat = 0
+    @IBInspectable var roundTopLeftCorner: Bool  = true
+    @IBInspectable var roundTopRightCorner: Bool  = true
+    @IBInspectable var roundBottomLeftCorner: Bool  = true
+    @IBInspectable var roundBottomRightCorner: Bool  = true
     @IBInspectable var bottomBorderWidth: CGFloat = 0
     @IBInspectable var bottomBorderColor: UIColor = UIColor.clear
     @IBInspectable var borderColor: UIColor = UIColor.clear
     @IBInspectable var borderWidth: CGFloat = 0
     @IBInspectable var hasShadow: Bool = false
-    
-    let bottomLayer: CALayer = CALayer()
-    
+    let bottomLayer: CALayer = CALayer()    
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
@@ -124,6 +126,20 @@ class RoundView: UIView {
         clipsToBounds = true
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
+        var cornerMask = CACornerMask()
+        if roundTopLeftCorner {
+            cornerMask.insert(CACornerMask.layerMinXMinYCorner)
+        }
+        if roundTopRightCorner {
+            cornerMask.insert(CACornerMask.layerMaxXMinYCorner)
+        }
+        if roundBottomLeftCorner {
+            cornerMask.insert(CACornerMask.layerMinXMaxYCorner)
+        }
+        if roundBottomRightCorner {
+            cornerMask.insert(CACornerMask.layerMaxXMaxYCorner)
+        }
+        layer.maskedCorners = cornerMask
         bottomLayer.backgroundColor = bottomBorderColor.cgColor
         bottomLayer.frame = CGRect(x: 0, y: bounds.size.height - bottomBorderWidth, width: bounds.size.width, height: bottomBorderWidth)
         layer.addSublayer(bottomLayer)

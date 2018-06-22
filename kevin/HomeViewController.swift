@@ -16,8 +16,8 @@ class HomeViewController: UIViewController {
     let subtitles: [[(String, String)]] = [[("Hello from Kevin", "Today is another nice day!!")],
                                            [("You have ran", "100 miles"), ("You have consumed", "100 calories")],
                                            [("You are all kinds of awesome!", "No kidding!")],
-                                           [("Chipolte", "$10.99"),("KFC", "$12.95"),("Dig Inn", "$13.95")]]
-    
+                                           [("Chipolte", "$10.99"), ("KFC", "$12.95"),
+                                            ("Dig Inn", "$13.95")]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,4 +68,3 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
 }
-
