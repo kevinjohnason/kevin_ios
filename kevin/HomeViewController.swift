@@ -10,14 +10,29 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    let sectionCells: [[String]] = [["gradientCell"], ["subtitleCell", "subtitleCell"],
-                                    ["cardCell"],
-                                    ["topCardCell", "middleCardCell", "bottomCardCell"]]
-    let subtitles: [[(String, String)]] = [[("Hello from Kevin", "Today is another nice day!!")],
-                                           [("You have ran", "100 miles"), ("You have consumed", "100 calories")],
-                                           [("You are all kinds of awesome!", "No kidding!")],
-                                           [("Chipolte", "$10.99"), ("KFC", "$12.95"),
-                                            ("Dig Inn", "$13.95")]]
+    
+    @IBOutlet weak var topViewHeight: NSLayoutConstraint!
+    
+    let cellModels: [[CellModel]] = [[SubtitleCellModel(identifier: "gradientCell", title: "Hello from Kevin",
+                                                   subtitle: "Today is another nice day!!")],
+                [SubtitleCellModel(identifier: "subtitleCell", title: "You have ran", subtitle: "100 miles"),
+                   SubtitleCellModel(identifier: "subtitleCell", title: "You have consumed", subtitle: "100 calories")],
+                [SubtitleCellModel(identifier: "cardCell", title: "You are all kinds of awesome!", subtitle: "No kidding!")],
+                [CollectionCellModel(identifier: "collectionCell", cellSize: CGSize(width: 60, height: 150),
+                                     collectionCellModels: [ValueSubtitleCellModel(identifier: "verticalBarCell",
+                                                                                   title: "Cholote", subtitle: "", value: 0.1),
+                                                            ValueSubtitleCellModel(identifier: "verticalBarCell",
+                                                                                   title: "Peanut", subtitle: "", value: 0.5),
+                                                            ValueSubtitleCellModel(identifier: "verticalBarCell",
+                                                                                   title: "Candy", subtitle: "", value: 0.35)])],
+                [CollectionCellModel(identifier: "collectionCell", cellSize: CGSize(width: 177, height: 100),
+                                     collectionCellModels: [ImageTitleCellModel(identifier: "imageTitleCell",
+                                                                                   title: "Filter 1", imageName: ""),
+                                                            ImageTitleCellModel(identifier: "imageTitleCell",
+                                                                                   title: "Filter 2", imageName: ""),
+                                                            ImageTitleCellModel(identifier: "imageTitleCell",
+                                                                                   title: "Filter 3", imageName: "")])]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +40,7 @@ class HomeViewController: UIViewController {
     }
 
     func setupTableView() {
+        topViewHeight.constant = UIApplication.shared.statusBarFrame.height
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -39,6 +55,8 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "TopCardTableViewCell", bundle: nil), forCellReuseIdentifier: "topCardCell")
         tableView.register(UINib(nibName: "MiddleCardTableViewCell", bundle: nil), forCellReuseIdentifier: "middleCardCell")
         tableView.register(UINib(nibName: "BottomCardTableViewCell", bundle: nil), forCellReuseIdentifier: "bottomCardCell")
+        tableView.register(UINib(nibName: "ContainerTableViewCell", bundle: nil), forCellReuseIdentifier: "containerCell")
+        tableView.register(UINib(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "collectionCell")
     }
 
 }
@@ -46,23 +64,25 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionCells.count
+        return cellModels.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionCells[section].count
+        return cellModels[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: sectionCells[indexPath.section][indexPath.row], for: indexPath)
-        if let subtitleCell = cell as? SubtitleTableViewCell {
-            subtitleCell.titleLabel.text = subtitles[indexPath.section][indexPath.row].0
-            subtitleCell.subtitleLabel.text = subtitles[indexPath.section][indexPath.row].1
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellModels[indexPath.section][indexPath.row].identifier, for: indexPath)
+        let cellModel = cellModels[indexPath.section][indexPath.row]
+        if let subtitleCell = cell as? SubtitleTableViewCell, let subtitleCellModel = cellModel as? SubtitleCellModel {
+            subtitleCell.titleLabel.text = subtitleCellModel.title
+            subtitleCell.subtitleLabel.text = subtitleCellModel.subtitle
+        } else if let collectionCell = cell as? CollectionTableViewCell, let collectionCellModel = cellModel as? CollectionCellModel {
+            collectionCell.cellSize = collectionCellModel.cellSize
+            collectionCell.cellModels = collectionCellModel.collectionCellModels
         }
         return cell
-        
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate {
