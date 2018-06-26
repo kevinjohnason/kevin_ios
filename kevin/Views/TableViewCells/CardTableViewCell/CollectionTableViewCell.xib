@@ -12,23 +12,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="142" id="KGk-i7-Jjw" customClass="CollectionTableViewCell" customModule="kevin" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="144" id="KGk-i7-Jjw" customClass="CollectionTableViewCell" customModule="kevin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="141.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="143.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXF-rq-Cvr" customClass="RoundView" customModule="kevin" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="300" height="121.5"/>
+                        <rect key="frame" x="10" y="10" width="300" height="123.5"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WCj-mI-mip">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="121.5"/>
+                                <rect key="frame" x="0.0" y="10" width="300" height="103.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="121.5" id="Ky8-xg-SaR"/>
+                                    <constraint firstAttribute="height" constant="103.5" id="Eqf-q3-gEg"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Db-ds-Z3k">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Db-ds-Z3k">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -38,9 +38,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="WCj-mI-mip" secondAttribute="bottom" id="OtF-ql-dAk"/>
+                            <constraint firstAttribute="bottom" secondItem="WCj-mI-mip" secondAttribute="bottom" constant="10" id="OtF-ql-dAk"/>
                             <constraint firstItem="WCj-mI-mip" firstAttribute="leading" secondItem="hXF-rq-Cvr" secondAttribute="leading" id="ayb-2z-n5i"/>
-                            <constraint firstItem="WCj-mI-mip" firstAttribute="top" secondItem="hXF-rq-Cvr" secondAttribute="top" id="gNX-Ml-Cx1"/>
+                            <constraint firstItem="WCj-mI-mip" firstAttribute="top" secondItem="hXF-rq-Cvr" secondAttribute="top" constant="10" id="gNX-Ml-Cx1"/>
                             <constraint firstAttribute="trailing" secondItem="WCj-mI-mip" secondAttribute="trailing" id="yfs-br-U1I"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -64,10 +64,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="collectionHeight" destination="Ky8-xg-SaR" id="goP-D9-olS"/>
+                <outlet property="collectionHeight" destination="Eqf-q3-gEg" id="G2O-9A-npA"/>
                 <outlet property="collectionView" destination="WCj-mI-mip" id="gGi-94-Zkl"/>
+                <outlet property="roundCardView" destination="hXF-rq-Cvr" id="pGM-g8-xqb"/>
             </connections>
-            <point key="canvasLocation" x="34" y="158"/>
+            <point key="canvasLocation" x="34" y="159"/>
         </tableViewCell>
     </objects>
 </document>

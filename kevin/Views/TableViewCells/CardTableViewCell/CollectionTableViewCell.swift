@@ -12,6 +12,8 @@ class CollectionTableViewCell: UITableViewCell {
     var cellModels: [TitleCellModel] = []
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionHeight: NSLayoutConstraint!
+    @IBOutlet weak var roundCardView: RoundView!
+    
     var cellSize: CGSize = CGSize(width: 0, height: 0) {
         didSet {
             collectionHeight.constant = cellSize.height
@@ -25,11 +27,9 @@ class CollectionTableViewCell: UITableViewCell {
     func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         collectionView.register(UINib(nibName: "BarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "verticalBarCell")
         collectionView.register(UINib(nibName: "ImageTitleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "imageTitleCell")
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .vertical
-        }
     }
     
 }
@@ -55,7 +55,7 @@ extension CollectionTableViewCell: UICollectionViewDataSource {
             }
         } else if let imageTitleCell = cell as? ImageTitleCollectionViewCell,
             let imageTitleModel = cellModel as? ImageTitleCellModel {
-            imageTitleCell.imageView.image = UIImage(named: imageTitleModel.title)
+            imageTitleCell.imageView.image = UIImage(named: imageTitleModel.imageName)
             imageTitleCell.titleLabel.text = imageTitleModel.title
         }
         return cell

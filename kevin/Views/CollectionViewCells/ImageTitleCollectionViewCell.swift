@@ -14,7 +14,20 @@ class ImageTitleCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupRoundShadow()
+    }
+    
+    func setupRoundShadow() {
+        backgroundColor = UIColor.clear
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.05
+        layer.shadowRadius = 3
+        layer.masksToBounds = false
+        contentView.layer.cornerRadius = 6
+        contentView.layer.masksToBounds = true
+        contentView.layer.backgroundColor = UIColor.white.cgColor
+        contentView.backgroundColor = UIColor.white
     }
 
 }
