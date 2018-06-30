@@ -18,7 +18,8 @@ class HomeViewModel {
     let disposeBag = DisposeBag()
     
     func loadCells() {
-        dataSource.loadHomeModelCells().debug("cells")
+        dataSource.loadHomeModelCells()
+            .map { $0.sections }            
             .bind(to: cellModels)
             .disposed(by: disposeBag)
     }

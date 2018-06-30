@@ -13,44 +13,11 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var topViewHeight: NSLayoutConstraint!
     
-//    let chartCellModels = [ValueSubtitleCellModel(identifier: "verticalBarCell",
-//                                                  title: "Cholote", subtitle: "", value: 0.1),
-//                           ValueSubtitleCellModel(identifier: "verticalBarCell",
-//                                                  title: "Peanut", subtitle: "", value: 0.5),
-//                           ValueSubtitleCellModel(identifier: "verticalBarCell",
-//                                                  title: "Candy", subtitle: "", value: 0.35)]
-//
-//    let optionCellModels = [ImageTitleCellModel(identifier: "imageTitleCell",
-//                                                title: "Filter 1", imageName: "burger-blue"),
-//                            ImageTitleCellModel(identifier: "imageTitleCell",
-//                                                title: "Filter 2", imageName: "coffee-blue"),
-//                            ImageTitleCellModel(identifier: "imageTitleCell",
-//                                                title: "Filter 3", imageName: "imac-blue")]
-    
-//    lazy var cellModels: [[CellModel]] = [[SubtitleCellModel(identifier: "gradientCell", title: "Hello from Kevin",
-//                                                   subtitle: "Today is another nice day!!")],
-//                [SubtitleCellModel(identifier: "subtitleCell", title: "You have ran", subtitle: "100 miles"),
-//                   SubtitleCellModel(identifier: "subtitleCell", title: "You have consumed", subtitle: "100 calories")],
-//                [SubtitleCellModel(identifier: "cardCell", title: "You are all kinds of awesome!", subtitle: "No kidding!")],
-//                [SubtitleCellModel(identifier: "topCardCell", title: "Grocery", subtitle: "$33"),
-//                 SubtitleCellModel(identifier: "middleCardCell", title: "Restaurant", subtitle: "$148"),
-//                 SubtitleCellModel(identifier: "bottomCardCell", title: "Education", subtitle: "$321")],
-//                [CollectionCellModel(identifier: "collectionCell", cellSize: CGSize(width: 60, height: 150),
-//                                     collectionCellModels: chartCellModels)],
-//                [ContainerCollectionCellModel(identifier: "collectionCell", cellSize: CGSize(width: 100, height: 100),
-//                                              collectionCellModels: optionCellModels,
-//                                              containerViewBackgroundColor: UIColor(red: 250/255.0, green: 250/255.0, blue: 250/255.0, alpha: 1))]
-//    ]
-    
     let viewModel: HomeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTableView()
-        
-//        let data = try? JSONEncoder().encode(cellModels)//
-//        print(String(data: data ?? Data(), encoding: .utf8) ?? "")
-        
+        setupTableView()        
         viewModel.cellModels.subscribe(onNext: { [unowned self] (_) in
             self.tableView.reloadData()
         }).disposed(by: viewModel.disposeBag)

@@ -1,1 +1,122 @@
-[[{"title":"Hello from Kevin","subtitle":"Today is another nice day!!","identifier":"gradientCell"}],[{"title":"You have ran","subtitle":"100 miles","identifier":"subtitleCell"},{"title":"You have consumed","subtitle":"100 calories","identifier":"subtitleCell"}],[{"title":"You are all kinds of awesome!","subtitle":"No kidding!","identifier":"cardCell"}],[{"title":"Grocery","subtitle":"$33","identifier":"topCardCell"},{"title":"Restaurant","subtitle":"$148","identifier":"middleCardCell"},{"title":"Education","subtitle":"$321","identifier":"bottomCardCell"}],[{"cellSize":[60,150],"collectionCellModels":[{"value":0.10000000000000001,"title":"Cholote","subtitle":"","identifier":"verticalBarCell"},{"value":0.5,"title":"Peanut","subtitle":"","identifier":"verticalBarCell"},{"value":0.34999999999999998,"title":"Candy","subtitle":"","identifier":"verticalBarCell"}],"identifier":"collectionCell"}],[{"cellSize":[100,100],"identifier":"collectionCell","containerViewBackgroundColor":{"red":0.98039215686274506,"green":0.98039215686274506,"blue":0.98039215686274506},"collectionCellModels":[{"title":"Filter 1","imageName":"burger-blue","identifier":"imageTitleCell"},{"title":"Filter 2","imageName":"coffee-blue","identifier":"imageTitleCell"},{"title":"Filter 3","imageName":"imac-blue","identifier":"imageTitleCell"}]}]]
+{
+    "sections": [
+                 [
+                  {
+                  "title": "Hello from Kevin",
+                  "type": "SubtitleCellModel",
+                  "identifier": "gradientCell",
+                  "subtitle": "Today is another nice day!!"
+                  }
+                  ],
+                 [
+                  {
+                  "title": "You have ran",
+                  "type": "SubtitleCellModel",
+                  "identifier": "subtitleCell",
+                  "subtitle": "100 miles"
+                  },
+                  {
+                  "title": "You have consumed",
+                  "type": "SubtitleCellModel",
+                  "identifier": "subtitleCell",
+                  "subtitle": "100 calories"
+                  }
+                  ],
+                 [
+                  {
+                  "title": "You are all kinds of awesome!",
+                  "type": "SubtitleCellModel",
+                  "identifier": "cardCell",
+                  "subtitle": "No kidding!"
+                  }
+                  ],
+                 [
+                  {
+                  "title": "Grocery",
+                  "type": "SubtitleCellModel",
+                  "identifier": "topCardCell",
+                  "subtitle": "$33"
+                  },
+                  {
+                  "title": "Restaurant",
+                  "type": "SubtitleCellModel",
+                  "identifier": "middleCardCell",
+                  "subtitle": "$148"
+                  },
+                  {
+                  "title": "Education",
+                  "type": "SubtitleCellModel",
+                  "identifier": "bottomCardCell",
+                  "subtitle": "$321"
+                  }
+                  ],
+                 [
+                  {
+                  "cellSize": [
+                               60,
+                               150
+                               ],
+                  "type": "CollectionCellModel",
+                  "identifier": "collectionCell",
+                  "collectionCellModels": [
+                                           {
+                                           "value": 0.1,
+                                           "title": "Cholote",
+                                           "type": "ValueSubtitleCellModel",
+                                           "identifier": "verticalBarCell",
+                                           "subtitle": ""
+                                           },
+                                           {
+                                           "value": 0.5,
+                                           "title": "Peanut",
+                                           "type": "ValueSubtitleCellModel",
+                                           "identifier": "verticalBarCell",
+                                           "subtitle": ""
+                                           },
+                                           {
+                                           "value": 0.35,
+                                           "title": "Candy",
+                                           "type": "ValueSubtitleCellModel",
+                                           "identifier": "verticalBarCell",
+                                           "subtitle": ""
+                                           }
+                                           ]
+                  }
+                  ],
+                 [
+                  {
+                  "containerViewBackgroundColor": {
+                  "red": 0.9803921568627451,
+                  "green": 0.9803921568627451,
+                  "blue": 0.9803921568627451
+                  },
+                  "cellSize": [
+                               100,
+                               100
+                               ],
+                  "type": "ContainerCollectionCellModel",
+                  "identifier": "collectionCell",
+                  "collectionCellModels": [
+                                           {
+                                           "title": "Filter 1",
+                                           "imageName": "burger-blue",
+                                           "type": "ImageTitleCellModel",
+                                           "identifier": "imageTitleCell"
+                                           },
+                                           {
+                                           "title": "Filter 2",
+                                           "imageName": "coffee-blue",
+                                           "type": "ImageTitleCellModel",
+                                           "identifier": "imageTitleCell"
+                                           },
+                                           {
+                                           "title": "Filter 3",
+                                           "imageName": "imac-blue",
+                                           "type": "ImageTitleCellModel",
+                                           "identifier": "imageTitleCell"
+                                           }
+                                           ]
+                  }
+                  ]
+                 ]
+}

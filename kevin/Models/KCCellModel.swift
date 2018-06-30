@@ -12,11 +12,106 @@ protocol ContainerCell {
     var containerViewBackgroundColor: UIColor { get set }
 }
 
-class CellModel: Codable {
+protocol Typable: Codable {
+    var type: String { get }
+}
+
+extension Typable {
+    var type: String {
+        return String(describing: self).components(separatedBy: ".").last ?? ""
+    }
+}
+
+enum TypeKey: String, CodingKey {
+    case type
+}
+
+extension String {
+    var typeClass: AnyObject.Type {
+        let appName = Bundle.main.infoDictionary?["CFBundleName"] as? String ?? ""
+        return NSClassFromString("\(appName).\(self)") ?? AnyObject.self
+    }
+}
+
+class Screen: Codable {
+    var sections: [[CellModel]] = []
+    
+    private enum CodingKeys: String, CodingKey {
+        case sections
+    }
+    
+    init() { }
+    
+    required init(from decoder: Decoder) throws {
+        var sections: [[CellModel]] = []
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        var sectionArrayForType = try container.nestedUnkeyedContainer(forKey: .sections)
+        while !sectionArrayForType.isAtEnd {
+           var rowArrayForType = try sectionArrayForType.nestedUnkeyedContainer()
+           var tmpArrayForType = rowArrayForType
+           var rows: [CellModel] = []
+           while !rowArrayForType.isAtEnd {
+                let typeContainer = try rowArrayForType.nestedContainer(keyedBy: TypeKey.self)
+                let typeStr = try typeContainer.decode(String.self, forKey: TypeKey.type)
+                guard let cellType = CellModel.subClassType(typeStr) as? CellModel.Type else {
+                    continue
+                }
+                let cellModel = try tmpArrayForType.decode(cellType)
+                rows.append(cellModel)
+            }
+            sections.append(rows)
+        }
+        self.sections =  sections
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(sections, forKey: .sections)
+    }
+}
+
+class CellModel: Codable, Typable {
     let identifier: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case identifier
+        case type
+    }
     
     init(identifier: String) {
         self.identifier = identifier
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.identifier = try container.decode(String.self, forKey: .identifier)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(identifier, forKey: .identifier)
+        try container.encode(type, forKey: .type)
+    }
+    
+    static func subClassType(_ typeStr: String) -> AnyObject.Type {
+        var type = CellModel.self
+        switch typeStr {
+        case "TitleCellModel":
+            type = TitleCellModel.self
+        case "ImageTitleCellModel":
+            type = ImageTitleCellModel.self
+        case "SubtitleCellModel":
+            type = SubtitleCellModel.self
+        case "ValueSubtitleCellModel":
+            type = ValueSubtitleCellModel.self
+        case "CollectionCellModel":
+            type = CollectionCellModel.self
+        case "ContainerCollectionCellModel":
+            type = ContainerCollectionCellModel.self
+        default:
+            break
+        }
+        return type
     }
 }
 
@@ -138,7 +233,18 @@ class CollectionCellModel: CellModel {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.cellSize = try container.decode(CGSize.self, forKey: .cellSize)
-        self.collectionCellModels = try container.decode([ImageTitleCellModel].self, forKey: .collectionCellModels)
+        var collectionContainer = try container.nestedUnkeyedContainer(forKey: .collectionCellModels)
+        var tmpContainer = collectionContainer
+        var cellModels: [TitleCellModel] = []
+        while !collectionContainer.isAtEnd {
+            let cellContainer = try collectionContainer.nestedContainer(keyedBy: TypeKey.self)
+            let typeStr = try cellContainer.decode(String.self, forKey: TypeKey.type)
+            guard let type = CellModel.subClassType(typeStr) as? TitleCellModel.Type else {
+                continue
+            }
+            cellModels.append(try tmpContainer.decode(type))
+        }        
+        self.collectionCellModels = cellModels
         try super.init(from: decoder)
     }
     
@@ -176,8 +282,11 @@ class ContainerCollectionCellModel: CollectionCellModel, ContainerCell {
         var container = encoder.container(keyedBy: CodingKeys.self)
         guard let colorComponents = containerViewBackgroundColor.cgColor.components else {
             return
-        }        
-        try container.encode(Color(red: Double(colorComponents[0]), green: Double(colorComponents[1]), blue: Double(colorComponents[2])), forKey: .containerViewBackgroundColor)
+        }
+        try container.encode(Color(red: Double(colorComponents[0]),
+                                   green: Double(colorComponents[1]),
+                                   blue: Double(colorComponents[2])),
+                                   forKey: .containerViewBackgroundColor)
     }
 }
 
