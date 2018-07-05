@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "GradientSubtitleTableViewCell", bundle: nil), forCellReuseIdentifier: "gradientCell")
         tableView.register(UINib(nibName: "SubtitleTableViewCell", bundle: nil), forCellReuseIdentifier: "subtitleCell")
         tableView.register(UINib(nibName: "CardTableViewCell", bundle: nil), forCellReuseIdentifier: "cardCell")
+        tableView.register(UINib(nibName: "ImageCardTableViewCell", bundle: nil), forCellReuseIdentifier: "imageCardCell")
         tableView.register(UINib(nibName: "TopCardTableViewCell", bundle: nil), forCellReuseIdentifier: "topCardCell")
         tableView.register(UINib(nibName: "MiddleCardTableViewCell", bundle: nil), forCellReuseIdentifier: "middleCardCell")
         tableView.register(UINib(nibName: "BottomCardTableViewCell", bundle: nil), forCellReuseIdentifier: "bottomCardCell")
@@ -64,6 +65,11 @@ extension HomeViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier:
             viewModel.cellModels.value[indexPath.section][indexPath.row].identifier, for: indexPath)
         let cellModel = viewModel.cellModels.value[indexPath.section][indexPath.row]
+        
+        if let imageSubtitleTitleCell = cell as? ImageSubtitleTableViewCell,
+            let imageSubtitleCellModel = cellModel as? ImageSubtitleCellModel {
+            imageSubtitleTitleCell.cellImageView?.image = UIImage(named: imageSubtitleCellModel.imageName)
+        }
         if let subtitleCell = cell as? SubtitleTableViewCell, let subtitleCellModel = cellModel as? SubtitleCellModel {
             subtitleCell.titleLabel.text = subtitleCellModel.title
             subtitleCell.subtitleLabel.text = subtitleCellModel.subtitle

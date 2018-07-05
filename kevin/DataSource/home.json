@@ -25,9 +25,10 @@
                  [
                   {
                   "title": "You are all kinds of awesome!",
-                  "type": "SubtitleCellModel",
-                  "identifier": "cardCell",
-                  "subtitle": "No kidding!"
+                  "type": "ImageSubtitleCellModel",
+                  "identifier": "imageCardCell",
+                  "subtitle": "No kidding!",
+                  "imageName": "rock-black"
                   }
                   ],
                  [

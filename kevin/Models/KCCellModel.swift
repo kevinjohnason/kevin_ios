@@ -100,6 +100,8 @@ class CellModel: Codable, Typable {
             type = TitleCellModel.self
         case "ImageTitleCellModel":
             type = ImageTitleCellModel.self
+        case "ImageSubtitleCellModel":
+            type = ImageSubtitleCellModel.self
         case "SubtitleCellModel":
             type = SubtitleCellModel.self
         case "ValueSubtitleCellModel":
@@ -186,6 +188,31 @@ class SubtitleCellModel: TitleCellModel {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(subtitle, forKey: .subtitle)
+    }
+}
+
+class ImageSubtitleCellModel: SubtitleCellModel {
+    let imageName: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case imageName
+    }
+    
+    init(identifier: String, title: String, subtitle: String, imageName: String) {
+        self.imageName = imageName
+        super.init(identifier: identifier, title: title, subtitle: subtitle)
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.imageName = try container.decode(String.self, forKey: .imageName)
+        try super.init(from: decoder)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        try super.encode(to: encoder)
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(imageName, forKey: .imageName)
     }
 }
 

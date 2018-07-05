@@ -21,6 +21,7 @@
 		310B1F3020E2A1AA008BAB70 /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B1F2F20E2A1A9008BAB70 /* AppDataSource.swift */; };
 		310B1F3220E2DB9A008BAB70 /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = 310B1F3120E2DB9A008BAB70 /* home.json */; };
 		310B1F3420E2DDFB008BAB70 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B1F3320E2DDFB008BAB70 /* HomeViewModel.swift */; };
+		318E7DCC20E8351500AC9E02 /* ImageCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 318E7DCA20E8351500AC9E02 /* ImageCardTableViewCell.xib */; };
 		3199A14720DACC74005CB940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A14620DACC74005CB940 /* AppDelegate.swift */; };
 		3199A14920DACC74005CB940 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3199A14820DACC74005CB940 /* HomeViewController.swift */; };
 		3199A14C20DACC74005CB940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3199A14A20DACC74005CB940 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		310B1F2F20E2A1A9008BAB70 /* AppDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
 		310B1F3120E2DB9A008BAB70 /* home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 		310B1F3320E2DDFB008BAB70 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		318E7DCA20E8351500AC9E02 /* ImageCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCardTableViewCell.xib; sourceTree = "<group>"; };
 		3199A14320DACC74005CB940 /* kevin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kevin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3199A14620DACC74005CB940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3199A14820DACC74005CB940 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */,
 				31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */,
 				31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */,
+				318E7DCA20E8351500AC9E02 /* ImageCardTableViewCell.xib */,
 				3100394E20DD8DCB00BB027F /* ContainerTableViewCell */,
 			);
 			path = CardTableViewCell;
@@ -412,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318E7DCC20E8351500AC9E02 /* ImageCardTableViewCell.xib in Resources */,
 				31A67E0D20DC496F006D11BF /* MiddleCardTableViewCell.xib in Resources */,
 				3100394D20DD8D5400BB027F /* ContainerTableViewCell.xib in Resources */,
 				31A67E1120DC497F006D11BF /* BottomCardTableViewCell.xib in Resources */,
