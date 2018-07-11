@@ -37,13 +37,15 @@
                   "title": "Grocery",
                   "type": "SubtitleCellModel",
                   "identifier": "topCardCell",
-                  "subtitle": "$33"
+                  "subtitle": "$33",
+                  "showBottomBorder": true
                   },
                   {
                   "title": "Restaurant",
                   "type": "SubtitleCellModel",
                   "identifier": "middleCardCell",
-                  "subtitle": "$148"
+                  "subtitle": "$148",
+                  "showBottomBorder": true
                   },
                   {
                   "title": "Education",
@@ -56,7 +58,7 @@
                   {
                   "cellSize": [
                                60,
-                               150
+                               130
                                ],
                   "type": "CollectionCellModel",
                   "identifier": "collectionCell",
@@ -69,7 +71,7 @@
                                            "subtitle": ""
                                            },
                                            {
-                                           "value": 0.5,
+                                           "value": 0.8,
                                            "title": "Peanut",
                                            "type": "ValueSubtitleCellModel",
                                            "identifier": "verticalBarCell",
