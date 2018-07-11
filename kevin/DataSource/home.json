@@ -10,16 +10,17 @@
                   ],
                  [
                   {
-                  "title": "You have ran",
+                  "title": "Cash",
                   "type": "SubtitleCellModel",
                   "identifier": "subtitleCell",
-                  "subtitle": "100 miles"
+                  "subtitle": "$4,613",
+                  "showBottomBorder": true
                   },
                   {
-                  "title": "You have consumed",
+                  "title": "Credit Debt",
                   "type": "SubtitleCellModel",
                   "identifier": "subtitleCell",
-                  "subtitle": "100 calories"
+                  "subtitle": "$3,675"
                   }
                   ],
                  [

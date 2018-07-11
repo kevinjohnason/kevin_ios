@@ -20,19 +20,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwq-Jn-dTR" customClass="RoundView" customModule="kevin" customModuleProvider="target">
-                        <rect key="frame" x="15" y="15" width="290" height="132.5"/>
+                        <rect key="frame" x="8" y="15" width="304" height="132.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tta-Xp-7Zc">
-                                <rect key="frame" x="75" y="25" width="140" height="36.5"/>
+                                <rect key="frame" x="75" y="25" width="154" height="36.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27o-wY-7Lu">
-                                        <rect key="frame" x="51.5" y="0.0" width="37.5" height="18"/>
+                                        <rect key="frame" x="58.5" y="0.0" width="37.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-x6-FFd">
-                                        <rect key="frame" x="56" y="23" width="28.5" height="13.5"/>
+                                        <rect key="frame" x="63" y="23" width="28.5" height="13.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldt-oe-FNI">
-                                <rect key="frame" x="75" y="81.5" width="140" height="51"/>
+                                <rect key="frame" x="75" y="81.5" width="154" height="51"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.30980392159999998" green="0.75686274509999996" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,11 +60,12 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.96798036509999996" green="0.96229133020000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="wwq-Jn-dTR" secondAttribute="bottom" constant="15" id="CeL-LK-u0T"/>
-                    <constraint firstAttribute="trailing" secondItem="wwq-Jn-dTR" secondAttribute="trailing" constant="15" id="Go5-58-TGD"/>
+                    <constraint firstAttribute="trailing" secondItem="wwq-Jn-dTR" secondAttribute="trailing" constant="8" id="Go5-58-TGD"/>
                     <constraint firstItem="wwq-Jn-dTR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="kL3-cN-PwO"/>
-                    <constraint firstItem="wwq-Jn-dTR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="uw0-Pj-aqK"/>
+                    <constraint firstItem="wwq-Jn-dTR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="uw0-Pj-aqK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

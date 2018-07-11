@@ -301,10 +301,10 @@
 			children = (
 				3100395720DF325A00BB027F /* CollectionTableViewCell */,
 				31A67E0120DC459C006D11BF /* CardTableViewCell.xib */,
+				318E7DCA20E8351500AC9E02 /* ImageCardTableViewCell.xib */,
 				31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */,
 				31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */,
 				31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */,
-				318E7DCA20E8351500AC9E02 /* ImageCardTableViewCell.xib */,
 				3100394E20DD8DCB00BB027F /* ContainerTableViewCell */,
 			);
 			path = CardTableViewCell;

@@ -72,10 +72,11 @@ class Screen: Codable {
 
 class CellModel: Codable, Typable {
     let identifier: String
-    
+    var showBottomBorder: Bool = false
     private enum CodingKeys: String, CodingKey {
         case identifier
         case type
+        case showBottomBorder
     }
     
     init(identifier: String) {
@@ -85,6 +86,9 @@ class CellModel: Codable, Typable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.identifier = try container.decode(String.self, forKey: .identifier)
+        if container.contains(.showBottomBorder) {
+            self.showBottomBorder = try container.decode(Bool.self, forKey: .showBottomBorder)
+        }
     }
     
     func encode(to encoder: Encoder) throws {

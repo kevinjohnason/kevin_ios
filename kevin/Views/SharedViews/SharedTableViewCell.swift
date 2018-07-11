@@ -39,11 +39,30 @@ class SubtitleTableViewCell: UITableViewCell {
     var disposeBag: DisposeBag = DisposeBag()
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    var bottomBorder: CALayer?
     
     override func prepareForReuse() {
         super.prepareForReuse()
         disposeBag = DisposeBag()
+        bottomBorder?.removeFromSuperlayer()
+        bottomBorder = nil
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bottomBorder?.frame = CGRect(x: 15, y: self.frame.size.height - 1, width: self.frame.size.width - 30, height: 1)
+    }
+    
+    func showBottomBorder() {
+        if self.bottomBorder != nil {
+            return
+        }
+        let bottomBorder = CALayer()
+        bottomBorder.backgroundColor = UIColor(red: 227/255.0, green: 235/255.0, blue: 246/255.0, alpha: 1).cgColor
+        contentView.layer.addSublayer(bottomBorder)
+        self.bottomBorder = bottomBorder
+    }
+    
 }
 
 class ImageSubtitleTableViewCell: SubtitleTableViewCell {

@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VM-YO-OGP" customClass="RoundView" customModule="kevin" customModuleProvider="target">
-                        <rect key="frame" x="10" y="10" width="300" height="54.5"/>
+                        <rect key="frame" x="8" y="10" width="304" height="54.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-nB-gp0">
-                                <rect key="frame" x="10" y="10" width="280" height="34.5"/>
+                                <rect key="frame" x="10" y="10" width="284" height="34.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chb-gg-glL">
                                         <rect key="frame" x="0.0" y="8.5" width="37.5" height="18"/>
@@ -32,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qz-tI-Qlw">
-                                        <rect key="frame" x="249" y="10" width="31" height="14.5"/>
+                                        <rect key="frame" x="253" y="10" width="31" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -60,10 +60,10 @@
                 </subviews>
                 <color key="backgroundColor" red="0.96798036509999996" green="0.96229133020000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="6VM-YO-OGP" secondAttribute="trailing" constant="10" id="BBB-ab-N0D"/>
+                    <constraint firstAttribute="trailing" secondItem="6VM-YO-OGP" secondAttribute="trailing" constant="8" id="BBB-ab-N0D"/>
                     <constraint firstAttribute="bottom" secondItem="6VM-YO-OGP" secondAttribute="bottom" id="F41-7S-C73"/>
                     <constraint firstItem="6VM-YO-OGP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fmd-NT-XSA"/>
-                    <constraint firstItem="6VM-YO-OGP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xMT-rS-Twk"/>
+                    <constraint firstItem="6VM-YO-OGP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="xMT-rS-Twk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

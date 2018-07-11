@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMK-FC-wcA">
-                        <rect key="frame" x="144.5" y="10" width="31" height="61.5"/>
+                        <rect key="frame" x="144.5" y="10" width="31" height="46.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq2-SF-U5i">
-                        <rect key="frame" x="139" y="91.5" width="42" height="21"/>
+                        <rect key="frame" x="139" y="76.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                     <constraint firstItem="eq2-SF-U5i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="LNK-ap-M58"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eq2-SF-U5i" secondAttribute="trailing" constant="10" id="OWz-qS-Yrl"/>
                     <constraint firstItem="xMK-FC-wcA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QQG-FX-J0J"/>
-                    <constraint firstAttribute="bottom" secondItem="eq2-SF-U5i" secondAttribute="bottom" constant="10" id="qvY-e3-h3p"/>
+                    <constraint firstAttribute="bottom" secondItem="eq2-SF-U5i" secondAttribute="bottom" constant="25" id="qvY-e3-h3p"/>
                     <constraint firstItem="xMK-FC-wcA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="yqm-ck-BPO"/>
                 </constraints>
             </tableViewCellContentView>

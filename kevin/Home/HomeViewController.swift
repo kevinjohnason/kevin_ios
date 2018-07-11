@@ -66,6 +66,7 @@ extension HomeViewController: UITableViewDataSource {
             viewModel.cellModels.value[indexPath.section][indexPath.row].identifier, for: indexPath)
         let cellModel = viewModel.cellModels.value[indexPath.section][indexPath.row]
         
+                
         if let imageSubtitleTitleCell = cell as? ImageSubtitleTableViewCell,
             let imageSubtitleCellModel = cellModel as? ImageSubtitleCellModel {
             imageSubtitleTitleCell.cellImageView?.image = UIImage(named: imageSubtitleCellModel.imageName)
@@ -73,6 +74,9 @@ extension HomeViewController: UITableViewDataSource {
         if let subtitleCell = cell as? SubtitleTableViewCell, let subtitleCellModel = cellModel as? SubtitleCellModel {
             subtitleCell.titleLabel.text = subtitleCellModel.title
             subtitleCell.subtitleLabel.text = subtitleCellModel.subtitle
+            if cellModel.showBottomBorder {
+                subtitleCell.showBottomBorder()
+            }
         } else if let collectionCell = cell as? CollectionTableViewCell, let collectionCellModel = cellModel as? CollectionCellModel {
             collectionCell.cellSize = collectionCellModel.cellSize
             collectionCell.cellModels = collectionCellModel.collectionCellModels
@@ -80,6 +84,7 @@ extension HomeViewController: UITableViewDataSource {
                 collectionCell.roundCardView.backgroundColor = containerCellModel.containerViewBackgroundColor
             }
         }
+        
         return cell
     }
 }
