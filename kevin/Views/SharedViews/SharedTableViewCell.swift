@@ -67,7 +67,9 @@ class SubtitleTableViewCell: UITableViewCell {
 
 class ImageSubtitleTableViewCell: SubtitleTableViewCell {
     @IBOutlet weak var cellImageView: UIImageView?
-
+    
+    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
+    
 }
 
 class SubtitleActionTableViewCell: SubtitleTableViewCell, ActionButtonCell {

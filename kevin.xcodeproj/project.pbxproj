@@ -43,6 +43,9 @@
 		31A67E0920DC4957006D11BF /* TopCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */; };
 		31A67E0D20DC496F006D11BF /* MiddleCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */; };
 		31A67E1120DC497F006D11BF /* BottomCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */; };
+		31A8AC9120F6E06E00BEFD7C /* BottomImageCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A8AC9020F6E06E00BEFD7C /* BottomImageCardTableViewCell.xib */; };
+		31A8AC9320F6E07700BEFD7C /* MiddleImageCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A8AC9220F6E07700BEFD7C /* MiddleImageCardTableViewCell.xib */; };
+		31A8AC9520F6E08400BEFD7C /* TopImageCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31A8AC9420F6E08400BEFD7C /* TopImageCardTableViewCell.xib */; };
 		5F8468D43E352A5F17FC3718 /* Pods_kevinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B57660A3F17F2676623D7C4 /* Pods_kevinTests.framework */; };
 		845B5B7663469C89CB40D31F /* Pods_kevin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ECEED9E2E9FA7319B53ADB /* Pods_kevin.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +102,9 @@
 		31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCardTableViewCell.xib; sourceTree = "<group>"; };
 		31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiddleCardTableViewCell.xib; sourceTree = "<group>"; };
 		31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCardTableViewCell.xib; sourceTree = "<group>"; };
+		31A8AC9020F6E06E00BEFD7C /* BottomImageCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomImageCardTableViewCell.xib; sourceTree = "<group>"; };
+		31A8AC9220F6E07700BEFD7C /* MiddleImageCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiddleImageCardTableViewCell.xib; sourceTree = "<group>"; };
+		31A8AC9420F6E08400BEFD7C /* TopImageCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopImageCardTableViewCell.xib; sourceTree = "<group>"; };
 		44ECEED9E2E9FA7319B53ADB /* Pods_kevin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kevin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		706973FE02C05D67132F8D28 /* Pods-kevin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kevin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kevin/Pods-kevin.debug.xcconfig"; sourceTree = "<group>"; };
 		70C2E8AECA43DBB30CC543FF /* Pods-kevinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kevinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kevinTests/Pods-kevinTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -302,12 +308,39 @@
 				3100395720DF325A00BB027F /* CollectionTableViewCell */,
 				31A67E0120DC459C006D11BF /* CardTableViewCell.xib */,
 				318E7DCA20E8351500AC9E02 /* ImageCardTableViewCell.xib */,
-				31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */,
-				31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */,
-				31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */,
+				31A8AC9820F6E41200BEFD7C /* TopCard */,
+				31A8AC9720F6E40900BEFD7C /* MiddleCard */,
+				31A8AC9620F6E3FF00BEFD7C /* BottomCard */,
 				3100394E20DD8DCB00BB027F /* ContainerTableViewCell */,
 			);
 			path = CardTableViewCell;
+			sourceTree = "<group>";
+		};
+		31A8AC9620F6E3FF00BEFD7C /* BottomCard */ = {
+			isa = PBXGroup;
+			children = (
+				31A67E0F20DC497F006D11BF /* BottomCardTableViewCell.xib */,
+				31A8AC9020F6E06E00BEFD7C /* BottomImageCardTableViewCell.xib */,
+			);
+			name = BottomCard;
+			sourceTree = "<group>";
+		};
+		31A8AC9720F6E40900BEFD7C /* MiddleCard */ = {
+			isa = PBXGroup;
+			children = (
+				31A67E0B20DC496F006D11BF /* MiddleCardTableViewCell.xib */,
+				31A8AC9220F6E07700BEFD7C /* MiddleImageCardTableViewCell.xib */,
+			);
+			name = MiddleCard;
+			sourceTree = "<group>";
+		};
+		31A8AC9820F6E41200BEFD7C /* TopCard */ = {
+			isa = PBXGroup;
+			children = (
+				31A67E0720DC4957006D11BF /* TopCardTableViewCell.xib */,
+				31A8AC9420F6E08400BEFD7C /* TopImageCardTableViewCell.xib */,
+			);
+			name = TopCard;
 			sourceTree = "<group>";
 		};
 		83497B14B1AB1C527F275FC4 /* Frameworks */ = {
@@ -416,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				318E7DCC20E8351500AC9E02 /* ImageCardTableViewCell.xib in Resources */,
+				31A8AC9520F6E08400BEFD7C /* TopImageCardTableViewCell.xib in Resources */,
 				31A67E0D20DC496F006D11BF /* MiddleCardTableViewCell.xib in Resources */,
 				3100394D20DD8D5400BB027F /* ContainerTableViewCell.xib in Resources */,
 				31A67E1120DC497F006D11BF /* BottomCardTableViewCell.xib in Resources */,
@@ -427,8 +461,10 @@
 				3199A14C20DACC74005CB940 /* Main.storyboard in Resources */,
 				31A67DFF20DC4284006D11BF /* SubtitleTableViewCell.xib in Resources */,
 				310B1F2920E155E9008BAB70 /* ImageTitleCollectionViewCell.xib in Resources */,
+				31A8AC9120F6E06E00BEFD7C /* BottomImageCardTableViewCell.xib in Resources */,
 				31A67E0320DC459C006D11BF /* CardTableViewCell.xib in Resources */,
 				310B1F3220E2DB9A008BAB70 /* home.json in Resources */,
+				31A8AC9320F6E07700BEFD7C /* MiddleImageCardTableViewCell.xib in Resources */,
 				3100395620DD911200BB027F /* BarCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

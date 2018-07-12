@@ -35,23 +35,29 @@
                  [
                   {
                   "title": "Grocery",
-                  "type": "SubtitleCellModel",
-                  "identifier": "topCardCell",
-                  "subtitle": "$33",
+                  "type": "ImageSubtitleCellModel",
+                  "identifier": "topImageCardCell",
+                  "subtitle": "$33.28",
+                  "imageName": "credit_card-green",
+                  "imageWidth": 20,
                   "showBottomBorder": true
                   },
                   {
-                  "title": "Restaurant",
-                  "type": "SubtitleCellModel",
-                  "identifier": "middleCardCell",
-                  "subtitle": "$148",
+                  "title": "Utility",
+                  "type": "ImageSubtitleCellModel",
+                  "identifier": "middleImageCardCell",
+                  "subtitle": "$148.43",
+                  "imageName": "light_bulb-green",
+                  "imageWidth": 20,
                   "showBottomBorder": true
                   },
                   {
-                  "title": "Education",
-                  "type": "SubtitleCellModel",
-                  "identifier": "bottomCardCell",
-                  "subtitle": "$321"
+                  "title": "Business",
+                  "type": "ImageSubtitleCellModel",
+                  "identifier": "bottomImageCardCell",
+                  "imageName": "suit_case-green",
+                  "imageWidth": 20,
+                  "subtitle": "$321.32"
                   }
                   ],
                  [

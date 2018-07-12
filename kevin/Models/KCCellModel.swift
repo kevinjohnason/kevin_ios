@@ -197,19 +197,26 @@ class SubtitleCellModel: TitleCellModel {
 
 class ImageSubtitleCellModel: SubtitleCellModel {
     let imageName: String
-    
+    let imageWidth: Double?
     private enum CodingKeys: String, CodingKey {
         case imageName
+        case imageWidth
     }
     
-    init(identifier: String, title: String, subtitle: String, imageName: String) {
+    init(identifier: String, title: String, subtitle: String, imageName: String, imageWidth: Double? = nil) {
         self.imageName = imageName
+        self.imageWidth = imageWidth
         super.init(identifier: identifier, title: title, subtitle: subtitle)
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.imageName = try container.decode(String.self, forKey: .imageName)
+        if container.contains(.imageWidth) {
+            self.imageWidth = try container.decode(Double.self, forKey: .imageWidth)
+        } else {
+            self.imageWidth = nil
+        }
         try super.init(from: decoder)
     }
     

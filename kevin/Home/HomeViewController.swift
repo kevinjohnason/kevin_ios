@@ -45,6 +45,9 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "TopCardTableViewCell", bundle: nil), forCellReuseIdentifier: "topCardCell")
         tableView.register(UINib(nibName: "MiddleCardTableViewCell", bundle: nil), forCellReuseIdentifier: "middleCardCell")
         tableView.register(UINib(nibName: "BottomCardTableViewCell", bundle: nil), forCellReuseIdentifier: "bottomCardCell")
+        tableView.register(UINib(nibName: "TopImageCardTableViewCell", bundle: nil), forCellReuseIdentifier: "topImageCardCell")
+        tableView.register(UINib(nibName: "MiddleImageCardTableViewCell", bundle: nil), forCellReuseIdentifier: "middleImageCardCell")
+        tableView.register(UINib(nibName: "BottomImageCardTableViewCell", bundle: nil), forCellReuseIdentifier: "bottomImageCardCell")
         tableView.register(UINib(nibName: "ContainerTableViewCell", bundle: nil), forCellReuseIdentifier: "containerCell")
         tableView.register(UINib(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "collectionCell")
     }
@@ -66,10 +69,13 @@ extension HomeViewController: UITableViewDataSource {
             viewModel.cellModels.value[indexPath.section][indexPath.row].identifier, for: indexPath)
         let cellModel = viewModel.cellModels.value[indexPath.section][indexPath.row]
         
-                
         if let imageSubtitleTitleCell = cell as? ImageSubtitleTableViewCell,
             let imageSubtitleCellModel = cellModel as? ImageSubtitleCellModel {
             imageSubtitleTitleCell.cellImageView?.image = UIImage(named: imageSubtitleCellModel.imageName)
+            if let imageWidth = imageSubtitleCellModel.imageWidth {
+                imageSubtitleTitleCell.imageWidthConstraint.constant = CGFloat(imageWidth)
+                imageSubtitleTitleCell.imageWidthConstraint.isActive = true
+            }
         }
         if let subtitleCell = cell as? SubtitleTableViewCell, let subtitleCellModel = cellModel as? SubtitleCellModel {
             subtitleCell.titleLabel.text = subtitleCellModel.title
